@@ -16,94 +16,103 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style-results.css" />
 </head>
 
 <body>
+    <div class="mycontainer">
+        <!-- nav bar -->
+        <nav class="uk-navbar-container">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active" id="skills-profiler"><a href="./index.html">Home</a></li>
+                    <li class="uk-active" id="job-search"><a href="./results.html">Results</a></li>
+                    <li class="uk-parent" id="skills-extraction"><a href="./keywords.html">Keywords</a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+        </nav>
 
-    <!-- nav bar -->
-    <nav class="uk-navbar-container">
-        <div class="uk-navbar-left">
-            <ul class="uk-navbar-nav">
-                <li class="uk-active" id="skills-profiler"><a href="./index.html">Home</a></li>
-                <li class="uk-active" id="job-search"><a href="./results.html">Results</a></li>
-                <li class="uk-parent" id="skills-extraction"><a href="./keywords.html">Keywords</a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-<div uk-grid>
-
-    <div class="uk-width-auto@m">
-        <div class="uk-card-header">
-            <div class="uk-grid-small uk-flex-middle" >
-                <div class="uk-width-expand">
-                    <h3 class="uk-card-title uk-margin-remove-bottom">Job Search</h3>
-                    <!-- <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p> -->
+        <div uk-grid>
+            <div class="uk-width-auto@m">
+                <div class="uk-card-header">
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <!-- <div class="uk-width-auto">
+                            <img class="uk-border-square" width="80" height="90" src="assets/images/results-image-02.jpg">
+                        </div> -->
+                        <div class="uk-width-expand">
+                            <h3 class="uk-card-title uk-margin-remove-bottom">Job Search</h3>
+                            <!-- <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-card-body">
+                    <p>Welcome! Enter your professional skills to help guide your job search.</p>
+                    <form>
+                        <div class="uk-form-custom">
+                            <input type="text">
+                            <button id="submitbtn" type="button">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
+
+
+
+            <!-- Table -->
+
+            <table class="uk-width-expand@m">
+                <thead>
+                    <tr>
+                        <th class="uk-width-small">Table Heading</th>
+                        <th>Table Heading</th>
+                        <th>Table Heading</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</td>
+                        <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</td>
+                        <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</td>
+                        <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</td>
+                        <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</td>
+                        <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="uk-card-body">
-            <p>Welcome! Enter your professional skills to help guide your job search.</p>
-        </div>
-     <form>
-            <div uk-form-custom>
-                <input type="text">
-           <button type="button">Submit</button>
-            </div>
-        </form>
-    </div>
 
-
-
-    <!-- Table -->
-    
-    <table class="uk-width-expand@m">
-        <thead>
-            <tr>
-                <th class="uk-width-small">Table Heading</th>
-                <th>Table Heading</th>
-                <th>Table Heading</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Table Data</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                <td><button class="uk-button uk-button-default" type="button">Button</button></td>
-            </tr>
-            <tr>
-                <td>Table Data</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                <td><button class="uk-button uk-button-default" type="button">Button</button></td>
-            </tr>
-            <tr>
-                <td>Table Data</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                <td><button class="uk-button uk-button-default" type="button">Button</button></td>
-            </tr>
-            <tr>
-                <td>Table Data</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                <td><button class="uk-button uk-button-default" type="button">Button</button></td>
-            </tr>
-            <tr>
-                <td>Table Data</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                <td><button class="uk-button uk-button-default" type="button">Button</button></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-    <!-- footer
-    <footer class="uk-position-bottom-center uk-navbar-container uk-width-1-1"></footer>
-    <p>Created by Landcers Inc.</p>
+        <!--     
+    <footer class="footer" ></footer>
+    <p>Created by Lancers Inc.</p>
     </footer> -->
 
-
+    </div>
 
 
 

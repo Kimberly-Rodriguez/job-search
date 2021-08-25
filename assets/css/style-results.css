@@ -2,5 +2,24 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Work Sans', sans-serif;
   }
   
+  #submitbtn {
+      margin-left: 3em;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
+    clear: both;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    text-align: center;
+  }
+
+  .mycontainer {
+      height: 100vh;
+  }
