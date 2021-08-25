@@ -26,7 +26,7 @@
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
                 <li class="uk-active" id="skills-profiler"><a href="./index.html">Home</a></li>
-                <li class="uk-active" id="job-search"><a href="./results.html">Results</a></li>
+                <li class="uk-parent" id="job-search"><a href="./results.html">Results</a></li>
                 <li class="uk-parent" id="skills-extraction"><a href="./keywords.html">Keywords</a></li>
                 <li><a href=""></a></li>
             </ul>
@@ -36,14 +36,14 @@
 
     <!-- search section -->
 
-   
 
 
-    <div class="uk-card uk-card-default uk-width-1-2@m">
+
+    <div class="uk-card uk-card-default uk-width-1-1">
         <div class="uk-card-header">
             <div class="uk-grid-small uk-flex-middle" uk-grid>
                 <div class="uk-width-auto">
-                    <img class="uk-border-circle" width="40" height="40" src="/.assets/images/job-search-image.jpg">
+                    <img class="uk-border-square" width="50" height="50" src="assets/images/job-search-image.jpg">
                 </div>
                 <div class="uk-width-expand">
                     <h3 class="uk-card-title uk-margin-remove-bottom">Job Search</h3>
@@ -51,24 +51,82 @@
                 </div>
             </div>
         </div>
-        <div class="uk-card-body">
-            <p>Welcome! Enter your professional skills to help guide your job search.</p>
-        </div>
-        <form>
-            <div uk-form-custom>
-                <input type="text">
-                <button type="button">Submit</button>
+        <div>
+            <div class="uk-card-body">
+                <p>Welcome! Use the dropdown to chose a job category you would like to search</p>
             </div>
-        </form>
+            <form class="uk-form-horizontaluk-width-1-1">
+                <div class="uk-margin ">
+                    <!-- <label class="uk-form-label" for="form-horizontal-select">Job Categories</label> -->
+                    <div class="uk-form-controls">
+                        <select class="uk-select" id="form-horizontal-select">
+                            <option>Accounting</option>
+                            <option>Corporate</option>
+                            <option>Data Science</option>
+                            <option>Editor</option>
+                            <option>HR</option>
+                            <option>Law</option>
+                            <option>Mechanic</option>
+                            <option>Nurses</option>
+                            <option>Physical Assistant</option>
+                            <option>Project Management</option>
+                            <option>Recruiting</option>
+                            <option>Sales</option>
+                            <option>UX</option>
+                            <option>Writer</option>
+                            <option>Account Management/Customer Success</option>
+                            <option>Customer Service Career</option>
+                            <option>Design</option>
+                            <option>Education</option>
+                            <option>IT</option>
+                            <option>Marketing</option>
+                            <option>Mental Health</option>
+                            <option>Office Administration</option>
+                            <option>Product</option>
+                            <option>Public Relations</option>
+                            <option>Retail</option>
+                            <option>Software Engineer</option>
+                            <option>Videography</option>
+                        </select>
+                    </div>
+                    <button class="uk-button uk-button-primary uk-button-large uk-width-1-1">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
+
+    <!-- grid for keywords entered -->
+    <!-- 
+
+    <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center uk-padding-small" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">keyword</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">keyword</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">keyword</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">keyword</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">keyword</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">keyword</div>
+        </div>
+    </div> -->
+
 
 
     <!-- footer -->
-    <footer class="uk-position-bottom-center uk-navbar-container uk-width-1-1">
-        <p>footer</p>
+    <!-- <footer class="uk-position-bottom-center uk-section-muted uk-width-1-1">
+        <p>Built by The Lancers</p>
     </footer>
-  
 
+ -->
 
 
 
