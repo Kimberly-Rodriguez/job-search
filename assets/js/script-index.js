@@ -1,28 +1,46 @@
 // initial probing of museAPI to see how it reacts
-var userInput = "Accounting";
-var preppedInput = "";
+var categoryInput = "";
 var locationInput = "";
+var prepLoc = "";
+var prepCat = "";
+var queryString = './results.html?category=' + categoryInput + '&location=' + prepLoc;
 
 
-function prepareInput(){
-    locationInput.replace(" ", "%20")
 
+//properly formats all spaces and comas from the location and catergory input
+function prepareInput() {
+    prepLoc = locationInput.trim();
+    prepLoc = prepLoc.replace(/ /g, "%20");
+    prepLoc = prepLoc.replace(/,/g, "%2C");
+    console.log(prepLoc);
+    prepCat = categoryInput.replace(/ /g, "%20");
 }
 
 
-function museFetch(){
 
-    var url = "https://www.themuse.com/api/public/jobs?category="+userInput+"&location="+locationInput+"&page=1&descending=true";
-fetch(url, {
-    method: 'get', //get is the default
 
-})
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-    });
-};
+//queryString stores prepared inputs as a URL
+function setQuery() {
+queryString = './results.html?category=' + prepCat + '&location=' + prepLoc;
+}
 
-museFetch();
+//Sets queryString as our new URL and redirects us
+function redirectUrl() {
+location.assign(queryString);
+}
+
+//event listener for a button click, receiving user input, prepping it
+// and pushing the prepped inputs to our url
+$(".uk-button").on("click", function(event){
+    event.preventDefault();
+    categoryInput = $(".categoryInput").val();
+    locationInput = $(".locationInput").val();
+    // console.log(categoryInput);
+    // console.log(locationInput);
+    prepareInput();
+    // console.log(prepLoc);
+    // console.log(prepCat);
+    setQuery();
+    console.log(queryString);
+    redirectUrl();
+});
