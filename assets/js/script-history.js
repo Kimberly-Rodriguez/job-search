@@ -1,6 +1,12 @@
 
-
 // get local storage
+var getLocal = localStorage.getItem("searchHistory");
+console.log(getLocal);
+
+var cleanLocal = getLocal.split(",");
+
+console.log(cleanLocal);
+
 
 // assign that to a variable 
 
