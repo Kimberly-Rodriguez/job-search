@@ -71,3 +71,22 @@ function init() {
 };
 
 init();
+
+fetch("https://skill-extraction.p.rapidapi.com/skill_extraction", {
+	"method": "POST",
+	"headers": {
+		"content-type": "application/json",
+		"x-rapidapi-host": "skill-extraction.p.rapidapi.com",
+		"x-rapidapi-key": "d9eb4f9e2dmshdaac0840cf89ba0p19d27cjsn11a23ad049ad"
+	},
+	"body": {
+		"operation": "text_extraction",
+		"text": "You will be responsible for the development of server-side logic, definition and maintenance of databases, and ensuring high performance and responsiveness to requests from the front-end. Additionally, you will be developing user interface components and implementing them following well-known workflows for whatever languages and frameworks are in use. You will ensure that these components and the overall application are robust and easy to maintain. You are expected to coordinate with your team, working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality products is important."
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
