@@ -22,7 +22,7 @@ function museFetch() {
             for ( let i = 0; i < 6; i++) {
                 
                 // console.log(data.results[i].company.name);
-                $(`#data-0${i}`).html(`${data.results[i].company.name} </br>`);
+                $(`#data-0${i}`).html(`${data.results[i].company.name} </br></br>`);
                 $(`#data-0${i}`).append(data.results[i].name);
                 $(`#table-0${i}`).html(data.results[i].contents);
 
