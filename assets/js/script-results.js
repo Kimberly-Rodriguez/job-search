@@ -6,7 +6,7 @@ console.log(redirectedUrl);
 // AND then we are fetching that information from API
 function museFetch() {
     
-    var url = "https://www.themuse.com/api/public/jobs" + redirectedUrl + "&page=1&descending=true";
+    var url = "https://www.themuse.com/api/public/jobs" + redirectedUrl + "&page=1&descending=true&api_key=23e5932b55bcb7c1c25fc9345f275bfa396c25cfa07e4a436777b253ac0a36c5";
     fetch(url, {
         method: 'get', //get is the default
 
