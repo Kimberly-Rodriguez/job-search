@@ -24,6 +24,10 @@
       height: 100vh;
   }
 
+  .table-name {
+    min-width: 250px;
+  }
+
   td {
     padding: 1em;
   }
