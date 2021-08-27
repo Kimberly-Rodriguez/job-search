@@ -23,3 +23,7 @@
   .mycontainer {
       height: 100vh;
   }
+
+  td {
+    padding: 1em;
+  }
