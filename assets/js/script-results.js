@@ -25,6 +25,7 @@ function museFetch() {
                 $(`#data-0${i}`).html(`${data.results[i].company.name} </br></br>`);
                 $(`#data-0${i}`).append(data.results[i].name);
                 $(`#table-0${i}`).html(data.results[i].contents);
+                $(`.link0${i}`).attr("href", data.results[i].refs.landing_page);
 
                 //use str.length or text.length to simplify to first 100 words
                 var text = $(`#table-0${i}`).text();
