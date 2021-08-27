@@ -25,9 +25,14 @@ function museFetch() {
                 $(`#data-0${i}`).text(data.results[i].company.name);
                 $(`#data-0${i}`).append(data.results[i].name);
                 $(`#table-0${i}`).html(data.results[i].contents);
+
+                //use str.length or text.length to simplify to first 100 words
+                    var text = $(`#table-0${i}`).text();
+                    if (text.length > 1000) {
+                        $(`#table-0${i}`).text(text.substr(0, text.lastIndexOf(' ', 1000)) + '...');
+                    }
              }
         });
-
        
 
 };
