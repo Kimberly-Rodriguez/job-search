@@ -1,5 +1,16 @@
 
 var redirectedUrl = location.search;
+var lastSearch = localStorage.getItem("lastSearch");
+
+// sets the results navbar tab to redirect to the previous search
+//THIS IS IMPORTANT- without it the search history breaks after going from results back to history
+if (!lastSearch) {
+    $(".results").attr("href", "#");
+}
+else {
+    $(".results").attr("href", lastSearch);
+};
+
 console.log(redirectedUrl);
 
 // we're taking location and category from the URL and inserting it into our API...
@@ -64,6 +75,7 @@ function init() {
     //position 0, and then save new array to local storage
     storedHistory.split(/,/g)
 
+    //added a comma to divide each entry
     var searchHistory = currentHistory+",".concat(storedHistory)
 
     localStorage.setItem("searchHistory", searchHistory);
