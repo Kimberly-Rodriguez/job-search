@@ -64,7 +64,7 @@ function init() {
     //position 0, and then save new array to local storage
     storedHistory.split(/,/g)
 
-    var searchHistory = currentHistory.concat(storedHistory)
+    var searchHistory = currentHistory+",".concat(storedHistory)
 
     localStorage.setItem("searchHistory", searchHistory);
 
