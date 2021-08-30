@@ -51,15 +51,6 @@ function museFetch() {
 
 museFetch();
 
-// for (each card)
-
-//take the data that the API is giving us and displaying the information on the card/page
-
-// for loop for the object array 
-
-// when the user clicks on the jobs THEN we will run the next API that will take us to the skill extractor page
-
-
 function init() {
     var currentHistory = location.href
     var storedHistory = localStorage.getItem("searchHistory");
@@ -102,3 +93,4 @@ fetch("https://skill-extraction.p.rapidapi.com/skill_extraction", {
 .catch(err => {
 	console.error(err);
 });
+

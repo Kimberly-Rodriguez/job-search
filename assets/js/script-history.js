@@ -1,3 +1,4 @@
+
 var getLocal = localStorage.getItem("searchHistory");
 var splitLocal = ""
 console.log(getLocal);
@@ -54,3 +55,15 @@ for (i=0; i<6; i++)
 
 
 */
+
+
+
+// get local storage
+
+// assign that to a variable 
+
+// split by it commas 
+
+// we then need to run a for loop 
+
+
