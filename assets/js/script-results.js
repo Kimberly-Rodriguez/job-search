@@ -44,30 +44,14 @@ function museFetch() {
                     $(`#table-0${i}`).text(text.substr(0, text.lastIndexOf(' ', 1000)) + '...');
                 }
 
+                learningObjects(data.results[i].name)
+                console.log(data.results[i].name)
 
             }
-            const settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": "https://job-and-resume-matching-for-hr-management-systems.p.rapidapi.com/api/v1.0/tools/most-required-technical-skills-for-job",
-                "method": "POST",
-                "headers": {
-                    "content-type": "application/json",
-                    "x-rapidapi-host": "job-and-resume-matching-for-hr-management-systems.p.rapidapi.com",
-                    "x-rapidapi-key": "d9eb4f9e2dmshdaac0840cf89ba0p19d27cjsn11a23ad049ad"
-                },
-                "processData": false,
-                "data": {
-                    "job_titles": [
-                        currentHistory,
-                        
-                    ]
-                }
-            };
 
-            $.ajax(settings).done(function (response) {
-                console.log(response);
-            });
+
+
+
 
         });
 };
@@ -96,5 +80,41 @@ function init() {
 
 };
 
+
+function learningObjects(jobTitle) {
+
+    fetch("https://learning-objects-v2.p.rapidapi.com/search?keywords=" + jobTitle + "&lang=en&type=video&sort=popularity&model=strict&max=10&page=0", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "learning-objects-v2.p.rapidapi.com",
+            "x-rapidapi-key": "7d039f89c6msh0f2c2b6ab2ee542p15d141jsnb051331afdd5"
+        }
+    })
+        .then(response => {
+            return response.json();
+            // console.log(response.url);
+            // learningURL(response);
+        })
+
+        .then(function (data) {
+            console.log(data.response.content[0].url)
+            for (let i = 0; i < 6; i++) {
+                $(`.learn0${i}`).attr("href", data.response.content[i].url);
+
+            }
+        })
+
+
+            .catch(err => {
+                console.error(err);
+            })
+
+
+    // $(learningObjectResults).text(response.url);
+
+
+}
+
 init();
+
 
