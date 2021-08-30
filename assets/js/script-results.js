@@ -91,15 +91,25 @@ fetch("https://learning-objects-v2.p.rapidapi.com/search?keywords=" + jobTitle +
     }
 })
     .then(response => {
-        console.log(response.url);
+        return response.json();
+        // console.log(response.url);
+        // learningURL(response);
     })
+
+    .then(function (data) {
+        console.log(data.response.content[0].url)
+    })
+
+
     .catch(err => {
         console.error(err);
     });
 
 
-    $(learningObjectResults).text(response.url);
+    // $(learningObjectResults).text(response.url);
 
 
 }
     init();
+
+
