@@ -43,10 +43,33 @@ function museFetch() {
                 if (text.length > 1000) {
                     $(`#table-0${i}`).text(text.substr(0, text.lastIndexOf(' ', 1000)) + '...');
                 }
+
+
             }
+            const settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://job-and-resume-matching-for-hr-management-systems.p.rapidapi.com/api/v1.0/tools/most-required-technical-skills-for-job",
+                "method": "POST",
+                "headers": {
+                    "content-type": "application/json",
+                    "x-rapidapi-host": "job-and-resume-matching-for-hr-management-systems.p.rapidapi.com",
+                    "x-rapidapi-key": "d9eb4f9e2dmshdaac0840cf89ba0p19d27cjsn11a23ad049ad"
+                },
+                "processData": false,
+                "data": {
+                    "job_titles": [
+                        currentHistory,
+                        
+                    ]
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+
         });
-
-
 };
 
 museFetch();
@@ -58,39 +81,20 @@ function init() {
     if (!storedHistory) {
 
         localStorage.setItem("searchHistory", currentHistory);
-        
+
         return;
     }
-   
+
     // if localstorage has information, split local storage and concat so current url is in
     //position 0, and then save new array to local storage
     storedHistory.split(/,/g)
 
     //added a comma to divide each entry
-    var searchHistory = currentHistory+",".concat(storedHistory)
+    var searchHistory = currentHistory + ",".concat(storedHistory)
 
     localStorage.setItem("searchHistory", searchHistory);
 
 };
 
 init();
-
-fetch("https://skill-extraction.p.rapidapi.com/skill_extraction", {
-	"method": "POST",
-	"headers": {
-		"content-type": "application/json",
-		"x-rapidapi-host": "skill-extraction.p.rapidapi.com",
-		"x-rapidapi-key": "d9eb4f9e2dmshdaac0840cf89ba0p19d27cjsn11a23ad049ad"
-	},
-	"body": {
-		"operation": "text_extraction",
-		"text": "You will be responsible for the development of server-side logic, definition and maintenance of databases, and ensuring high performance and responsiveness to requests from the front-end. Additionally, you will be developing user interface components and implementing them following well-known workflows for whatever languages and frameworks are in use. You will ensure that these components and the overall application are robust and easy to maintain. You are expected to coordinate with your team, working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality products is important."
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
 
