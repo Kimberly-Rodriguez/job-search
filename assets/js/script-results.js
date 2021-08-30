@@ -81,25 +81,40 @@ function init() {
 };
 
 
-function learningObjects(jobTitle){
+function learningObjects(jobTitle) {
 
-fetch("https://learning-objects-v2.p.rapidapi.com/search?keywords=" + jobTitle + "&lang=en&type=video&sort=popularity&model=strict&max=10&page=0", {
-    "method": "GET",
-    "headers": {
-        "x-rapidapi-host": "learning-objects-v2.p.rapidapi.com",
-        "x-rapidapi-key": "7d039f89c6msh0f2c2b6ab2ee542p15d141jsnb051331afdd5"
-    }
-})
-    .then(response => {
-        console.log(response.url);
+    fetch("https://learning-objects-v2.p.rapidapi.com/search?keywords=" + jobTitle + "&lang=en&type=video&sort=popularity&model=strict&max=10&page=0", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "learning-objects-v2.p.rapidapi.com",
+            "x-rapidapi-key": "7d039f89c6msh0f2c2b6ab2ee542p15d141jsnb051331afdd5"
+        }
     })
-    .catch(err => {
-        console.error(err);
-    });
+        .then(response => {
+            return response.json();
+            // console.log(response.url);
+            // learningURL(response);
+        })
+
+        .then(function (data) {
+            console.log(data.response.content[0].url)
+            for (let i = 0; i < 6; i++) {
+                $(`.learn0${i}`).attr("href", data.response.content[i].url);
+
+            }
+        })
 
 
-    $(learningObjectResults).text(response.url);
+            .catch(err => {
+                console.error(err);
+            })
+
+
+    // $(learningObjectResults).text(response.url);
 
 
 }
-    init();
+
+init();
+
+
