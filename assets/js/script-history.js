@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+var getLocal = localStorage.getItem("searchHistory");
+
+var cleanLocal = getLocal.split(",");
+
+console.log(cleanLocal);
+=======
 
 var getLocal = localStorage.getItem("searchHistory");
 var splitLocal = ""
@@ -75,3 +82,4 @@ console.log(cleanLocal);
 // we then need to run a for loop 
 
 
+>>>>>>> ad6157a336671e939ad72b93b89c1fa3fced9b18
