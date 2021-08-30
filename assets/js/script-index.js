@@ -5,7 +5,16 @@ var prepLoc = "";
 var prepCat = "";
 var queryString = './results.html?category=' + categoryInput + '&location=' + prepLoc;
 
+var lastSearch = localStorage.getItem("lastSearch");
 
+// sets the results navbar tab to redirect to the previous search
+//THIS IS IMPORTANT- without it the search history breaks after going from results back to history
+if (!lastSearch) {
+    $(".results").attr("href", "#");
+}
+else {
+    $(".results").attr("href", lastSearch);
+};
 
 //properly formats all spaces and comas from the location and catergory input
 function prepareInput() {
