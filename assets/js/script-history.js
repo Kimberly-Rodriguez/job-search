@@ -10,7 +10,7 @@ console.log(getLocal);
 
 splitLocal = getLocal.split(",");
 localStorage.setItem("lastSearch", splitLocal[0]);
-console.log(splitLocal[0]);
+// console.log(splitLocal[0]);
 
 
 $(".results").attr("href", localStorage.getItem("lastSearch"));
