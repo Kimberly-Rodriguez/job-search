@@ -40,4 +40,4 @@ The user can easily search for job listings by selecting an industry they're int
 
 (c) Ezequiel Martinez, Kimberly Rodriguez, Chris Tolnai and Candice Wu 
 
-Licensed under the [MIT License](LINCENSE).
+Licensed under the [MIT License](LICENSE).
